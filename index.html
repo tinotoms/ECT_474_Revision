@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECT474 — Last Night Cheat Sheet</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #0f0f0f; color: #e8e8e8; font-size: 13px; line-height: 1.5; }
+  h1 { text-align: center; padding: 14px; background: #c0392b; color: white; font-size: 16px; letter-spacing: 1px; position: sticky; top: 0; z-index: 100; }
+  .tabs { display: flex; overflow-x: auto; background: #1a1a1a; border-bottom: 2px solid #c0392b; position: sticky; top: 40px; z-index: 99; }
+  .tab { padding: 8px 14px; cursor: pointer; white-space: nowrap; font-size: 12px; color: #aaa; border-right: 1px solid #333; transition: all 0.2s; }
+  .tab:hover { background: #222; color: white; }
+  .tab.active { background: #c0392b; color: white; font-weight: bold; }
+  .content { display: none; padding: 12px; max-width: 900px; margin: 0 auto; }
+  .content.active { display: block; }
+  .card { background: #1a1a1a; border-left: 3px solid #c0392b; border-radius: 4px; padding: 10px 12px; margin-bottom: 10px; }
+  .card h3 { color: #f39c12; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .card h4 { color: #e74c3c; font-size: 12px; margin: 8px 0 4px; }
+  .card p, .card li { font-size: 12px; color: #ccc; margin-bottom: 3px; }
+  .card ul { padding-left: 16px; }
+  .badge { display: inline-block; background: #c0392b; color: white; font-size: 10px; padding: 1px 6px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+  .badge.yellow { background: #e67e22; }
+  .badge.green { background: #27ae60; }
+  table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 6px; }
+  th { background: #2a2a2a; color: #f39c12; padding: 5px 7px; text-align: left; }
+  td { padding: 4px 7px; border-bottom: 1px solid #2a2a2a; color: #ccc; }
+  tr:nth-child(even) td { background: #161616; }
+  .formula { background: #0d1f0d; border: 1px solid #27ae60; border-radius: 4px; padding: 8px 10px; margin: 6px 0; font-family: monospace; font-size: 12px; color: #2ecc71; }
+  .hotlist { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .tag { background: #2a1a1a; border: 1px solid #c0392b; border-radius: 12px; padding: 3px 10px; font-size: 11px; color: #e74c3c; }
+  .section-title { color: #f39c12; font-size: 13px; font-weight: bold; margin: 12px 0 6px; padding-bottom: 4px; border-bottom: 1px solid #333; }
+</style>
+</head>
+<body>
+
+<h1>ECT474 ENTREPRENEURSHIP — EXAM CHEAT SHEET</h1>
+
+<div class="tabs">
+  <div class="tab active" onclick="show('m1')">M1: Concepts</div>
+  <div class="tab" onclick="show('m2')">M2: Ownership</div>
+  <div class="tab" onclick="show('m3')">M3: Institutions</div>
+  <div class="tab" onclick="show('m4')">M4: Projects</div>
+  <div class="tab" onclick="show('m5')">M5: Management</div>
+  <div class="tab" onclick="show('hotq')">🔥 HOT Q's</div>
+</div>
+
+<!-- MODULE 1 -->
+<div id="m1" class="content active">
+
+  <div class="card">
+    <h3>Entrepreneur vs Intrapreneur <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Aspect</th><th>Entrepreneur</th><th>Intrapreneur</th></tr>
+      <tr><td>Ownership</td><td>Owns the venture</td><td>Employee of company</td></tr>
+      <tr><td>Risk</td><td>Bears personal financial risk</td><td>No personal financial risk</td></tr>
+      <tr><td>Resources</td><td>Own/raised capital</td><td>Company's resources</td></tr>
+      <tr><td>Reward</td><td>Profit</td><td>Salary + bonus</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Entrepreneur vs Manager <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Dimension</th><th>Entrepreneur</th><th>Manager</th></tr>
+      <tr><td>Role</td><td>Creator / innovator</td><td>Administrator / executor</td></tr>
+      <tr><td>Risk</td><td>Bears full personal risk</td><td>No financial risk</td></tr>
+      <tr><td>Motivation</td><td>Profit, independence</td><td>Salary, promotion</td></tr>
+      <tr><td>Decision</td><td>Vision + instinct</td><td>Data + authority</td></tr>
+      <tr><td>Reward</td><td>Unlimited profit</td><td>Fixed salary</td></tr>
+      <tr><td>Focus</td><td>Opportunity-seeking</td><td>Problem-solving within constraints</td></tr>
+    </table>
+    <p style="margin-top:6px; color:#aaa;">Key line: Entrepreneur <em>creates</em> the org; Manager <em>operates</em> it.</p>
+  </div>
+
+  <div class="card">
+    <h3>Types of Entrepreneurs <span class="badge yellow">★★</span></h3>
+    <h4>By Behaviour:</h4>
+    <ul>
+      <li><b>Innovative</b> – introduces new products/processes (Elon Musk)</li>
+      <li><b>Imitative</b> – copies & adapts successful ideas</li>
+      <li><b>Fabian</b> – very cautious, changes only when forced</li>
+      <li><b>Drone</b> – refuses to change even at a loss</li>
+      <li><b>Social</b> – solves social problems</li>
+    </ul>
+    <h4>By Motivation:</h4>
+    <ul>
+      <li><b>Pure</b> – motivated by profit</li>
+      <li><b>Induced</b> – motivated by govt incentives (most suitable for India)</li>
+      <li><b>Motivated</b> – self-actualization driven</li>
+    </ul>
+    <h4>Most suitable for India:</h4>
+    <p>Induced + Agricultural — rural economy, govt schemes (Mudra, PMEGP), ground-level problems</p>
+  </div>
+
+  <div class="card">
+    <h3>Maslow's Need Hierarchy <span class="badge">★★★</span></h3>
+    <p>5 levels (bottom to top):</p>
+    <ul>
+      <li><b>1. Physiological</b> – food, shelter, clothing (basic survival)</li>
+      <li><b>2. Safety</b> – job security, financial stability</li>
+      <li><b>3. Social/Belonging</b> – friendship, community</li>
+      <li><b>4. Esteem</b> – recognition, status, respect</li>
+      <li><b>5. Self-Actualization</b> – realize full potential</li>
+    </ul>
+    <p style="margin-top:6px; color:#aaa;">Entrepreneurs driven by esteem + self-actualization once lower needs met. Rural entrepreneurs → physiological/safety; Tech founders → esteem/self-actualization.</p>
+  </div>
+
+  <div class="card">
+    <h3>McClelland's Achievement Theory <span class="badge">★★★</span></h3>
+    <p>Needs are <b>learned through experience</b>, not innate (1961). Three needs:</p>
+    <ul>
+      <li><b>nAch (Need for Achievement)</b> – excel, solve challenges, personal responsibility. Most critical for entrepreneurship. High-nAch → more likely to start businesses.</li>
+      <li><b>nPow (Need for Power)</b> – influence & lead others</li>
+      <li><b>nAff (Need for Affiliation)</b> – social acceptance. Usually lower in successful entrepreneurs.</li>
+    </ul>
+    <p style="margin-top:6px; color:#aaa;">EDPs designed to develop nAch. Societies with high nAch show faster economic growth.</p>
+  </div>
+
+  <div class="card">
+    <h3>Other Motivation Theories</h3>
+    <h4>ERG Theory (Alderfer):</h4>
+    <ul>
+      <li>Existence (physiological + safety)</li>
+      <li>Relatedness (social + esteem)</li>
+      <li>Growth (self-actualization)</li>
+    </ul>
+    <p>Multiple needs active simultaneously. Frustration at higher level → regression to lower.</p>
+    <h4>Herzberg's Two-Factor Theory:</h4>
+    <ul>
+      <li><b>Hygiene factors</b> (salary, security) – absence causes dissatisfaction, presence doesn't motivate</li>
+      <li><b>Motivators</b> (achievement, recognition, growth) – genuinely motivate → aligns with entrepreneurship</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>EDP — Entrepreneurial Development Programme <span class="badge yellow">★★</span></h3>
+    <p><b>Purpose:</b> Develop entrepreneurial competencies — knowledge, skills, motivation.</p>
+    <h4>Objectives:</h4>
+    <ul>
+      <li>Identify latent talent; develop managerial + technical skills</li>
+      <li>Create awareness of govt schemes; promote self-employment</li>
+    </ul>
+    <h4>Phases:</h4>
+    <ul>
+      <li><b>Pre-training</b> – publicity, selection, infrastructure prep</li>
+      <li><b>Training</b> – classroom inputs, factory visits, entrepreneur interactions</li>
+      <li><b>Post-training</b> – follow-up, loan assistance, monitoring</li>
+    </ul>
+    <p style="margin-top:4px; color:#aaa;">Key agencies: NIESBUD, NSIC, DICs, commercial banks</p>
+  </div>
+
+  <div class="card">
+    <h3>Successful Entrepreneur — Requirements</h3>
+    <p>8 points (1 mark each in 8-mark question):</p>
+    <div class="hotlist">
+      <span class="tag">Vision & Innovation</span>
+      <span class="tag">Risk-Taking</span>
+      <span class="tag">Self-Confidence</span>
+      <span class="tag">Leadership</span>
+      <span class="tag">Decision-Making</span>
+      <span class="tag">Domain Knowledge</span>
+      <span class="tag">Financial Literacy</span>
+      <span class="tag">Adaptability</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Rural vs Urban Entrepreneurship <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Aspect</th><th>Rural</th><th>Urban</th></tr>
+      <tr><td>Resources</td><td>Agriculture, handicrafts</td><td>Tech, capital, skilled labour</td></tr>
+      <tr><td>Scale</td><td>Micro/small</td><td>Small to large</td></tr>
+      <tr><td>Infrastructure</td><td>Limited</td><td>Well-developed</td></tr>
+      <tr><td>Finance</td><td>Govt schemes mainly</td><td>Banks, VCs, angels</td></tr>
+      <tr><td>Examples</td><td>Dairy, pottery, handloom</td><td>IT, manufacturing, services</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- MODULE 2 -->
+<div id="m2" class="content">
+
+  <div class="card">
+    <h3>Forms of Business Ownership <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Form</th><th>Key Feature</th><th>Liability</th></tr>
+      <tr><td>Sole Proprietorship</td><td>Single owner = manager</td><td>Unlimited, personal</td></tr>
+      <tr><td>Partnership</td><td>2–50 persons, Partnership Deed</td><td>Unlimited, joint & several</td></tr>
+      <tr><td>HUF</td><td>Managed by Karta; membership by birth</td><td>Karta: unlimited; others: limited</td></tr>
+      <tr><td>Cooperative</td><td>1 member 1 vote; service motive</td><td>Limited</td></tr>
+      <tr><td>Pvt Ltd Co</td><td>2–200 shareholders; no public shares</td><td>Limited to shares</td></tr>
+      <tr><td>Public Ltd Co</td><td>Min 7 members; stock exchange listed</td><td>Limited to shares</td></tr>
+      <tr><td>LLP</td><td>Hybrid: partner + company</td><td>Limited for all partners</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Proprietorship vs Partnership <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Aspect</th><th>Sole Proprietorship</th><th>Partnership</th></tr>
+      <tr><td>Owners</td><td>Only one</td><td>2 to 50</td></tr>
+      <tr><td>Formation</td><td>No formal agreement</td><td>Partnership deed needed</td></tr>
+      <tr><td>Capital</td><td>Limited to owner</td><td>Combined capital</td></tr>
+      <tr><td>Continuity</td><td>Ends with owner's death</td><td>Can continue</td></tr>
+      <tr><td>Profit</td><td>All to owner</td><td>Shared per agreed ratio</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Advantages of Partnership <span class="badge">★★★</span></h3>
+    <div class="hotlist">
+      <span class="tag">Easy formation</span>
+      <span class="tag">More capital</span>
+      <span class="tag">Shared risk</span>
+      <span class="tag">Combined skills</span>
+      <span class="tag">Better decisions</span>
+      <span class="tag">Flexibility</span>
+      <span class="tag">Better creditworthiness</span>
+      <span class="tag">Secrecy (no public accounts)</span>
+      <span class="tag">Easy dissolution</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Partnership Deed — Purpose <span class="badge yellow">★★</span></h3>
+    <ul>
+      <li>Defines profit/loss sharing ratio</li>
+      <li>Specifies capital contribution of each partner</li>
+      <li>Defines roles and responsibilities</li>
+      <li>Outlines admission/retirement/death procedures</li>
+      <li>Rules for dissolution</li>
+      <li>Prevents disputes; determines interest on capital</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Shares vs Debentures <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Aspect</th><th>Shares</th><th>Debentures</th></tr>
+      <tr><td>Nature</td><td>Ownership capital</td><td>Debt capital (loan)</td></tr>
+      <tr><td>Holder</td><td>Owner (shareholder)</td><td>Creditor</td></tr>
+      <tr><td>Return</td><td>Dividend (variable)</td><td>Fixed interest (guaranteed)</td></tr>
+      <tr><td>Voting Rights</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Risk</td><td>Higher</td><td>Lower</td></tr>
+      <tr><td>On liquidation</td><td>Paid last</td><td>Paid before shareholders</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Cooperative Society <span class="badge">★★★</span></h3>
+    <h4>Characteristics:</h4>
+    <ul>
+      <li>Voluntary membership; democratic control (1 member = 1 vote)</li>
+      <li>Service motive (not profit); limited return on capital</li>
+      <li>Surplus distributed proportional to transactions</li>
+      <li>Separate legal entity; govt support/subsidies</li>
+    </ul>
+    <h4>Types:</h4>
+    <ul>
+      <li><b>Consumer</b> – bulk buy & sell to members (Kendriya Bhandar)</li>
+      <li><b>Producer</b> – collective purchase of raw materials (Handloom coops)</li>
+      <li><b>Credit</b> – loans at low interest (Urban coop banks)</li>
+      <li><b>Marketing</b> – better market access (AMUL)</li>
+      <li><b>Farming / Housing</b> – joint cultivation / housing</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>MSME Classification (2020) <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Category</th><th>Investment</th><th>Turnover</th></tr>
+      <tr><td>Micro</td><td>Up to ₹1 cr</td><td>Up to ₹5 cr</td></tr>
+      <tr><td>Small</td><td>₹1–10 cr</td><td>₹5–50 cr</td></tr>
+      <tr><td>Medium</td><td>₹10–50 cr</td><td>₹50–250 cr</td></tr>
+    </table>
+    <p style="margin-top:6px; color:#aaa;">63M+ MSMEs | 110M+ employed | ~30% GDP | ~45% exports</p>
+  </div>
+
+  <div class="card">
+    <h3>Role of SSI/MSME in Economy <span class="badge">★★★ Every Paper</span></h3>
+    <div class="hotlist">
+      <span class="tag">Employment (2nd after agri)</span>
+      <span class="tag">30% GDP</span>
+      <span class="tag">45% exports</span>
+      <span class="tag">Equitable wealth distribution</span>
+      <span class="tag">Ancillary to large industry</span>
+      <span class="tag">Encourages entrepreneurship</span>
+      <span class="tag">Uses local resources</span>
+      <span class="tag">Rural & women entrepreneurship</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODULE 3 -->
+<div id="m3" class="content">
+
+  <div class="card">
+    <h3>Central Govt Institutions <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Institution</th><th>What it does</th></tr>
+      <tr><td><b>MSME-DI</b> (formerly SISI)</td><td>Training, consultancy, testing, EDPs — in all states</td></tr>
+      <tr><td><b>NSIC</b></td><td>Marketing support, hire-purchase machines, raw material, export support</td></tr>
+      <tr><td><b>SIDBI</b></td><td>Apex financial institution for MSME credit & refinancing</td></tr>
+      <tr><td><b>NIESBUD</b></td><td>Apex body for EDP training; trains trainers</td></tr>
+      <tr><td><b>NABARD</b></td><td>Rural credit, refinancing, SHG support, rural development</td></tr>
+      <tr><td><b>DICs</b></td><td>District-level single-window for loans, raw materials, licenses</td></tr>
+      <tr><td><b>DPIIT</b></td><td>Oversees Startup India, industrial policy, FDI</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>NGOs / Non-Govt Institutions <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Institution</th><th>Role</th></tr>
+      <tr><td><b>CII</b></td><td>Pro-business advocacy, training, trade fairs</td></tr>
+      <tr><td><b>FICCI</b></td><td>Trade, investment, global connections</td></tr>
+      <tr><td><b>SEWA</b></td><td>Microfinance, legal aid for self-employed women</td></tr>
+      <tr><td><b>ASSOCHAM</b></td><td>Industry-friendly regulations, networking</td></tr>
+      <tr><td><b>TCOs</b></td><td>Project reports, feasibility studies, tech transfer</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Women Entrepreneurship Schemes <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Scheme</th><th>Key Feature</th></tr>
+      <tr><td><b>TREAD</b></td><td>30% govt grant + 70% bank loan for non-farm women entrepreneurs</td></tr>
+      <tr><td><b>Mahila Udyam Nidhi</b></td><td>Soft loans from SIDBI up to ₹10 lakh for women in SSI</td></tr>
+      <tr><td><b>Stree Shakti (SBI)</b></td><td>0.5% interest concession for women with majority ownership</td></tr>
+      <tr><td><b>Udyogini</b></td><td>Up to ₹3 lakh at zero interest for BPL women</td></tr>
+      <tr><td><b>Stand-Up India</b></td><td>₹10L–₹1Cr mandatory loan per bank branch to woman + SC/ST</td></tr>
+      <tr><td><b>Annapurna</b></td><td>Up to ₹50,000 for women in food catering — no collateral</td></tr>
+      <tr><td><b>Mudra Yojana</b></td><td>Shishu (₹50k) / Kishore (₹5L) / Tarun (₹10L)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Govt Incentives for Entrepreneurship <span class="badge">★★★</span></h3>
+    <ul>
+      <li><b>Capital Subsidy (CLCSS)</b> – 15% on plant & machinery, max ₹15L</li>
+      <li><b>Tax Holiday</b> – 3 years under Startup India (Sec 80-IAC)</li>
+      <li><b>CGTMSE</b> – Collateral-free loans up to ₹2 crore</li>
+      <li><b>Interest Subsidy</b> – 3–5% by state govts on term loans</li>
+      <li><b>Power Tariff Concession</b> – reduced electricity for SSIs</li>
+      <li><b>Land at Concessional Rates</b> – industrial plots in backward areas</li>
+      <li><b>Export Incentives</b> – MEIS, duty drawback schemes</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Startup India & Startup Ecosystem <span class="badge yellow">★★</span></h3>
+    <ul>
+      <li>Launched 2016; DPIIT recognition; 80% off patent fees</li>
+      <li>3-year income tax exemption; angel tax exemption</li>
+      <li>Fund of Funds: ₹10,000 crore through SIDBI</li>
+      <li>Fast-track exit for failed startups</li>
+      <li>Self-certification under 9 labour & environment laws</li>
+      <li><b>AIM</b> – Atal Tinkering Labs in schools + ₹10cr grants to incubators</li>
+      <li><b>GeM</b> – Govt e-marketplace for MSME direct govt sales</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Women Entrepreneurs — Challenges</h3>
+    <div class="hotlist">
+      <span class="tag">Social & family resistance</span>
+      <span class="tag">Limited collateral / credit access</span>
+      <span class="tag">Low mobility & networking</span>
+      <span class="tag">Work-life balance burden</span>
+      <span class="tag">Lack of technical skills</span>
+      <span class="tag">Market access difficulty</span>
+      <span class="tag">Low legal literacy</span>
+    </div>
+    <h4 style="margin-top:8px;">Examples of Successful Women:</h4>
+    <ul>
+      <li><b>Kiran Mazumdar-Shaw</b> – Biocon (biotech giant)</li>
+      <li><b>Falguni Nayar</b> – Nykaa (beauty e-commerce)</li>
+      <li><b>Lijjat Papad</b> – ₹1,600 cr cooperative, 42,000 women</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- MODULE 4 -->
+<div id="m4" class="content">
+
+  <div class="card">
+    <h3>PERT vs CPM <span class="badge">★★★ Every Paper</span></h3>
+    <table>
+      <tr><th>Parameter</th><th>PERT</th><th>CPM</th></tr>
+      <tr><td>Nature</td><td>Probabilistic</td><td>Deterministic</td></tr>
+      <tr><td>Time estimates</td><td>Three (to, tm, tp)</td><td>Single estimate</td></tr>
+      <tr><td>Focus</td><td>Time under uncertainty</td><td>Time-cost optimization</td></tr>
+      <tr><td>Application</td><td>R&D, defence, new projects</td><td>Construction, manufacturing</td></tr>
+      <tr><td>Probability calc</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Developed by</td><td>US Navy, 1958 (Polaris)</td><td>DuPont, 1957</td></tr>
+    </table>
+    <div class="formula">PERT: te = (to + 4tm + tp) / 6 &nbsp;&nbsp; σ² = [(tp - to) / 6]²</div>
+  </div>
+
+  <div class="card">
+    <h3>NPV Method <span class="badge">★★★ Every Paper — Numericals!</span></h3>
+    <div class="formula">NPV = Σ [Ct / (1+r)^t] − C0</div>
+    <p><b>Decision Rule:</b> NPV &gt; 0 → Accept | NPV &lt; 0 → Reject</p>
+    <h4>Example (memorise this):</h4>
+    <p>Investment ₹1,00,000 | Cash inflow ₹40,000/yr for 3 yrs | Rate 10%</p>
+    <table>
+      <tr><th>Year</th><th>CF</th><th>PV Factor @10%</th><th>PV</th></tr>
+      <tr><td>1</td><td>40,000</td><td>0.909</td><td>36,360</td></tr>
+      <tr><td>2</td><td>40,000</td><td>0.826</td><td>33,040</td></tr>
+      <tr><td>3</td><td>40,000</td><td>0.751</td><td>30,040</td></tr>
+      <tr><td colspan="3"><b>Total PV</b></td><td><b>99,440</b></td></tr>
+    </table>
+    <p style="margin-top:6px;"><b>NPV = 99,440 − 1,00,000 = −₹560 → Reject</b></p>
+  </div>
+
+  <div class="card">
+    <h3>IRR Method <span class="badge">★★★</span></h3>
+    <p>IRR = discount rate where NPV = 0. Represents project's own rate of return.</p>
+    <div class="formula">IRR = r1 + [NPV1 / (NPV1 − NPV2)] × (r2 − r1)</div>
+    <p><b>Decision:</b> IRR &gt; Cost of Capital → Accept | IRR &lt; Cost of Capital → Reject</p>
+    <p style="margin-top:6px; color:#aaa;">Using same example: NPV @9% = +₹1,240 | NPV @10% = −₹560</p>
+    <p><b>IRR = 9 + [1240/(1240+560)] × 1 = 9.69% → Reject (less than 10%)</b></p>
+  </div>
+
+  <div class="card">
+    <h3>NPV vs IRR <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Parameter</th><th>NPV</th><th>IRR</th></tr>
+      <tr><td>Output</td><td>Rupee value (₹)</td><td>Percentage (%)</td></tr>
+      <tr><td>Discount rate</td><td>Given (cost of capital)</td><td>Calculated internally</td></tr>
+      <tr><td>Decision</td><td>NPV &gt; 0 → Accept</td><td>IRR &gt; CoC → Accept</td></tr>
+      <tr><td>Better for</td><td>Mutually exclusive projects</td><td>Ranking independent projects</td></tr>
+      <tr><td>Soundness</td><td>Theoretically superior</td><td>Popular in practice</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Other Evaluation Methods <span class="badge yellow">★★</span></h3>
+    <h4>Payback Period:</h4>
+    <div class="formula">PP = Initial Investment / Annual Cash Inflow</div>
+    <p>Accept if PP &lt; max acceptable period. Simple but ignores time value & post-payback flows.</p>
+    <h4>Break-Even Analysis:</h4>
+    <div class="formula">BEP (units) = Fixed Costs / (Selling Price − Variable Cost per unit)</div>
+    <h4>Profitability Index (PI):</h4>
+    <div class="formula">PI = PV of Cash Inflows / Initial Investment &nbsp; (Accept if PI &gt; 1)</div>
+  </div>
+
+  <div class="card">
+    <h3>Project Appraisal Stages <span class="badge">★★★</span></h3>
+    <p>6 stages — each 1 mark in a 6-mark question:</p>
+    <ul>
+      <li><b>Technical</b> – technology, capacity, machinery, raw material, location</li>
+      <li><b>Financial</b> – cost, funding, P&L projections, cash flow, DSCR, BEP</li>
+      <li><b>Market</b> – demand, competition, pricing, distribution</li>
+      <li><b>Economic/Social</b> – employment, import substitution, regional impact</li>
+      <li><b>Environmental</b> – EIA, pollution compliance, waste disposal</li>
+      <li><b>Managerial</b> – promoter background, team quality, organisational structure</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Project Report Components <span class="badge yellow">★★</span></h3>
+    <div class="hotlist">
+      <span class="tag">Executive Summary</span>
+      <span class="tag">Industry & Market Analysis</span>
+      <span class="tag">Technical Details</span>
+      <span class="tag">Financial Projections</span>
+      <span class="tag">Implementation Schedule (PERT/CPM)</span>
+      <span class="tag">Risk Analysis</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Project Life Cycle Phases</h3>
+    <ul>
+      <li><b>Initiation</b> – idea conceived, preliminary feasibility</li>
+      <li><b>Formulation/Planning</b> – DPR prepared, feasibility studies</li>
+      <li><b>Appraisal</b> – external agencies evaluate DPR</li>
+      <li><b>Implementation</b> – physical execution, CPM/PERT monitoring</li>
+      <li><b>Commissioning</b> – trial runs, commercial production begins</li>
+      <li><b>Evaluation</b> – actual vs projected, lessons documented</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Network Analysis — Need</h3>
+    <div class="hotlist">
+      <span class="tag">Complex project coordination</span>
+      <span class="tag">Time estimation</span>
+      <span class="tag">Critical path identification</span>
+      <span class="tag">Resource allocation</span>
+      <span class="tag">Risk management (float/slack)</span>
+      <span class="tag">Progress monitoring</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- MODULE 5 -->
+<div id="m5" class="content">
+
+  <div class="card">
+    <h3>Strategic Management — 4 Phases <span class="badge">★★★</span></h3>
+    <ul>
+      <li><b>A. Strategic Intent</b> – Vision, Mission, Business definition, Business model, Objectives</li>
+      <li><b>B. Strategy Formulation</b> – SWOT analysis → Gap analysis → Alternative strategies → Best strategy chosen</li>
+      <li><b>C. Strategy Implementation</b> – Project, Procedural, Resource allocation, Structural, Behavioural, Functional</li>
+      <li><b>D. Strategic Evaluation</b> – Set standards → Measure performance → Compare → Corrective action</li>
+    </ul>
+    <h4>Benefits:</h4>
+    <div class="hotlist">
+      <span class="tag">Selects best strategy</span>
+      <span class="tag">SWOT clarity</span>
+      <span class="tag">Realistic planning</span>
+      <span class="tag">Resource allocation</span>
+      <span class="tag">Better coordination</span>
+      <span class="tag">Face competition</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Types of Management <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Type</th><th>Key Focus / Associated With</th></tr>
+      <tr><td><b>Scientific</b></td><td>F.W. Taylor — work study, standardisation, functional foremanship</td></tr>
+      <tr><td><b>Administrative</b></td><td>Henri Fayol — 14 principles, overall org structure</td></tr>
+      <tr><td><b>Human Relations</b></td><td>Social factors, motivation, employee welfare, participation</td></tr>
+      <tr><td><b>Strategic</b></td><td>Long-term direction, SWOT, competitive positioning</td></tr>
+      <tr><td><b>Operations</b></td><td>Production, quality, supply chain, inventory</td></tr>
+      <tr><td><b>Financial</b></td><td>Capital budgeting, working capital, dividends</td></tr>
+      <tr><td><b>HR Management</b></td><td>Recruit, train, retain, motivate people</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Scientific Management — Principles (F.W. Taylor) <span class="badge yellow">★★</span></h3>
+    <ul>
+      <li><b>Scientific Task Analysis</b> – find the one best way (replace rule of thumb)</li>
+      <li><b>Division of Work & Responsibility</b> – mgmt plans, workers execute</li>
+      <li><b>Scientific Selection of Workers</b> – objective criteria, not nepotism</li>
+      <li><b>Training and Development</b> – train in efficient methods continuously</li>
+      <li><b>Cooperation</b> – replace conflict with mutual cooperation</li>
+      <li><b>Standardisation</b> – pre-set standards for products, tools, conditions</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Types of Capital Raising <span class="badge yellow">★★</span></h3>
+    <table>
+      <tr><th>Source</th><th>Key Feature</th></tr>
+      <tr><td><b>Equity Capital</b></td><td>Owner/shareholder funds; no fixed repayment; dividends</td></tr>
+      <tr><td><b>Debt Capital</b></td><td>Bank loans, debentures, bonds; repaid with interest</td></tr>
+      <tr><td><b>Retained Earnings</b></td><td>Cheapest source — profit reinvested, no interest/dividend</td></tr>
+      <tr><td><b>Venture Capital</b></td><td>VC firms invest in high-potential startups for equity</td></tr>
+      <tr><td><b>Angel Investors</b></td><td>HNI individuals, early-stage, smaller amounts than VC</td></tr>
+      <tr><td><b>Govt Grants</b></td><td>MUDRA, SIDBI, PMEGP — no repayment for grants</td></tr>
+      <tr><td><b>Public Deposits</b></td><td>Fixed-period deposits from public at specified interest</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Working Capital <span class="badge">★★★</span></h3>
+    <div class="formula">Working Capital = Current Assets − Current Liabilities</div>
+    <h4>Types:</h4>
+    <ul>
+      <li><b>Gross WC</b> – Total current assets</li>
+      <li><b>Net WC</b> – Current assets minus current liabilities (positive = healthy)</li>
+      <li><b>Permanent WC</b> – Minimum always needed for basic operations</li>
+      <li><b>Temporary WC</b> – Extra needed during peak seasons</li>
+    </ul>
+    <h4>Importance (7 points):</h4>
+    <div class="hotlist">
+      <span class="tag">Smooth daily operations</span>
+      <span class="tag">Production continuity</span>
+      <span class="tag">Meets short-term obligations</span>
+      <span class="tag">Supports growth</span>
+      <span class="tag">Financial cushion</span>
+      <span class="tag">Enhances creditworthiness</span>
+      <span class="tag">Measures liquidity</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Balance Sheet Analysis <span class="badge yellow">★★</span></h3>
+    <p><b>Owner Equity = Total Assets − Total Liabilities</b></p>
+    <h4>Liquidity Ratios:</h4>
+    <table>
+      <tr><th>Ratio</th><th>Formula</th><th>Ideal</th></tr>
+      <tr><td>Current Ratio</td><td>Current Assets ÷ Current Liabilities</td><td>2:1</td></tr>
+      <tr><td>Working Capital</td><td>Current Assets − Current Liabilities</td><td>Positive</td></tr>
+    </table>
+    <h4>Solvency Ratios:</h4>
+    <table>
+      <tr><th>Ratio</th><th>Formula</th><th>Preferred</th></tr>
+      <tr><td>Debt/Asset Ratio</td><td>Total Liabilities ÷ Total Assets</td><td>Lower</td></tr>
+      <tr><td>Equity/Asset Ratio</td><td>Total Equity ÷ Total Assets</td><td>Higher</td></tr>
+      <tr><td>Debt/Equity Ratio</td><td>Total Liabilities ÷ Total Equity</td><td>Lower (less debt)</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Break-Even Analysis <span class="badge">★★★</span></h3>
+    <div class="formula">Contribution = Sales − Variable Cost
+P/V Ratio = Contribution ÷ Sales
+BEP = Fixed Cost ÷ P/V Ratio
+Margin of Safety = Actual Sales − BEP Sales
+MoS % = (Actual − BEP) ÷ Actual × 100</div>
+    <h4>Example (memorise):</h4>
+    <p>SP=₹10, VC=₹6, FC=₹400 → Contribution=₹4 → P/V=40% → BEP=₹400÷0.4=<b>₹1,000 (100 units)</b></p>
+    <h4>How it helps:</h4>
+    <ul>
+      <li><b>Profitability</b> – knows exactly how much each unit contributes</li>
+      <li><b>Risk</b> – high MoS = low risk; low MoS = vulnerable</li>
+      <li><b>Pricing decisions</b> – tests impact of price changes</li>
+      <li><b>Target profit</b> – Sales = (FC + Desired Profit) ÷ P/V Ratio</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Recruitment & Selection Process <span class="badge yellow">★★</span></h3>
+    <h4>Recruitment (attracting candidates):</h4>
+    <ul>
+      <li>Identify vacancy → Job Analysis (Job Description + Job Spec) → Source candidates</li>
+      <li><b>Internal:</b> promotions, transfers, referrals</li>
+      <li><b>External:</b> ads, campus recruitment, agencies, walk-ins, employment exchanges</li>
+      <li>Receive applications → Screen & shortlist</li>
+    </ul>
+    <h4>Selection (choosing best candidate):</h4>
+    <ul>
+      <li>Written tests → Group Discussion → Personal Interview → Background check → Medical exam → Offer letter → Induction</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Marketing — Goals & Significance <span class="badge yellow">★★</span></h3>
+    <h4>Goals of Marketing:</h4>
+    <div class="hotlist">
+      <span class="tag">Satisfy customer needs</span>
+      <span class="tag">Create demand</span>
+      <span class="tag">Brand awareness & loyalty</span>
+      <span class="tag">Increase sales & market share</span>
+      <span class="tag">Achieve profitability</span>
+      <span class="tag">Customer relationships</span>
+      <span class="tag">Expand to new markets</span>
+    </div>
+    <h4>Significance for Growth & Sustainability:</h4>
+    <div class="hotlist">
+      <span class="tag">Creates awareness & demand</span>
+      <span class="tag">Customer satisfaction</span>
+      <span class="tag">Revenue & profitability</span>
+      <span class="tag">Brand identity & loyalty</span>
+      <span class="tag">Market expansion</span>
+      <span class="tag">Competitive advantage</span>
+      <span class="tag">Long-term sustainability</span>
+      <span class="tag">Feedback mechanism</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Workforce Planning — Contribution to HRM</h3>
+    <div class="hotlist">
+      <span class="tag">Ensures adequate staffing</span>
+      <span class="tag">Aligns HR with business strategy</span>
+      <span class="tag">Improves recruitment efficiency</span>
+      <span class="tag">Supports training & development</span>
+      <span class="tag">Succession planning</span>
+      <span class="tag">Reduces labour turnover costs</span>
+      <span class="tag">Optimises labour costs</span>
+      <span class="tag">Legal compliance</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Raising & Managing Capital — Steps</h3>
+    <h4>Raising:</h4>
+    <ul>
+      <li>Estimate requirements → Identify sources → Choose right debt-equity mix → Approach financial institutions → Complete legal formalities</li>
+    </ul>
+    <h4>Managing (Operational Level):</h4>
+    <ul>
+      <li>Budgeting & allocation → Working capital management → Monitoring & control → Reinvestment of profits → Debt repayment</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- HOT QUESTIONS -->
+<div id="hotq" class="content">
+
+  <div class="section-title">🔴 GUARANTEED — appeared in 3+ papers</div>
+
+  <div class="card">
+    <h3>M1: Entrepreneur vs Manager / Intrapreneur</h3>
+    <p>Use the comparison tables in Module 1 tab. Add key line: <em>"Entrepreneur creates the org; Manager operates it."</em></p>
+  </div>
+
+  <div class="card">
+    <h3>M1: McClelland's Theory</h3>
+    <p>nAch, nPow, nAff. Needs are <b>learned</b>. nAch most critical for entrepreneurship. EDPs develop nAch. High-nAch societies = more economic growth.</p>
+  </div>
+
+  <div class="card">
+    <h3>M1: Maslow's Theory</h3>
+    <p>5 levels: Physiological → Safety → Social → Esteem → Self-Actualization. Entrepreneurs driven by top 2 levels once basics met.</p>
+  </div>
+
+  <div class="card">
+    <h3>M2: Types of Business Ownership</h3>
+    <p>Sole Proprietorship / Partnership / HUF / Cooperative / Pvt Ltd / Public Ltd / LLP. Know: liability, members, formation, key feature for each.</p>
+  </div>
+
+  <div class="card">
+    <h3>M2: Role of SSI/MSME</h3>
+    <p>8 points: Employment, 30% GDP, 45% exports, Equitable distribution, Ancillary to large industry, Entrepreneurship entry, Local resources, Rural & women.</p>
+  </div>
+
+  <div class="card">
+    <h3>M2: Cooperative Society</h3>
+    <p>Types (Consumer/Producer/Credit/Marketing/Farming/Housing), Characteristics (voluntary, democratic, service motive), Structure (General Body → Managing Committee → President/Secretary).</p>
+  </div>
+
+  <div class="card">
+    <h3>M3: Central Govt Institutions</h3>
+    <p>MSME-DI, NSIC, SIDBI, NIESBUD, NABARD, DICs, DPIIT. Know full form + 3 functions of each.</p>
+  </div>
+
+  <div class="card">
+    <h3>M3: Women Entrepreneurship Schemes</h3>
+    <p>TREAD (30% grant), Mahila Udyam Nidhi (₹10L SIDBI), Stree Shakti (0.5% concession), Udyogini (zero interest BPL), Stand-Up India (₹10L–₹1Cr), Annapurna (₹50k food catering), Mudra (Shishu/Kishore/Tarun).</p>
+  </div>
+
+  <div class="card">
+    <h3>M4: NPV + IRR with Numerical</h3>
+    <p>Know the formula, steps, decision rule, and example. NPV numerical is almost certain. Practice: Year 1–3 cash flows, multiply by PV factor, sum, subtract investment.</p>
+    <p style="margin-top:4px; color:#aaa;">Common PV factors @10%: Y1=0.909, Y2=0.826, Y3=0.751 | @9%: Y1=0.917, Y2=0.842, Y3=0.772</p>
+  </div>
+
+  <div class="card">
+    <h3>M4: PERT vs CPM</h3>
+    <p>Full comparison table in Module 4 tab. Key difference: PERT = probabilistic (3 times), CPM = deterministic (1 time). Formula: <b>te = (to + 4tm + tp) / 6</b></p>
+  </div>
+
+  <div class="card">
+    <h3>M4: Project Appraisal Stages</h3>
+    <p>Technical → Financial → Market → Economic/Social → Environmental → Managerial. One sentence on each = 6 marks.</p>
+  </div>
+
+  <div class="card">
+    <h3>M5: Break-Even Analysis <span class="badge">★★★ Numericals likely</span></h3>
+    <p>Formulas: Contribution = Sales − VC | P/V Ratio = C÷S | BEP = FC÷PV | MoS = Actual − BEP</p>
+    <p>Example: SP=10, VC=6, FC=400 → C=4 → PV=40% → BEP=<b>₹1000 / 100 units</b></p>
+  </div>
+
+  <div class="card">
+    <h3>M5: Working Capital</h3>
+    <p>WC = Current Assets − Current Liabilities. Know 4 types (Gross/Net/Permanent/Temporary) + 7 importance points.</p>
+  </div>
+
+  <div class="card">
+    <h3>M5: Strategic Management 4 Phases</h3>
+    <p>Strategic Intent → Strategy Formulation → Strategy Implementation → Strategic Evaluation. Know sub-points of each phase.</p>
+  </div>
+
+  <div class="card">
+    <h3>M5: Recruitment & Selection</h3>
+    <p>Recruitment: Vacancy → Job Analysis → Sources (internal/external) → Applications → Screening. Selection: Tests → GD → Interview → Background check → Offer → Induction.</p>
+  </div>
+
+  <div class="section-title" style="margin-top:16px;">🟠 VERY LIKELY — appeared in 2 papers</div>
+
+  <div class="card">
+    <h3>Quick-fire List</h3>
+    <ul>
+      <li><b>M1:</b> EDP phases, Types of entrepreneurs, Rural vs Urban</li>
+      <li><b>M2:</b> Shares vs Debentures, Partnership deed, Sole proprietorship features/disadvantages</li>
+      <li><b>M3:</b> NGO roles (CII/FICCI/SEWA), Challenges of women entrepreneurs, Govt incentives</li>
+      <li><b>M4:</b> Payback period method, Project report structure, Project life cycle, Market analysis in project formulation</li>
+      <li><b>M5:</b> Types of management (7 types), Balance sheet ratios, Marketing goals, Capital raising sources</li>
+    </ul>
+  </div>
+
+  <div class="section-title" style="margin-top:16px;">⏱ TONIGHT'S STUDY ORDER</div>
+
+  <div class="card">
+    <h3>Do this, in this order</h3>
+    <ul>
+      <li><b>9pm–10pm:</b> Module 1 — Maslow, McClelland, Entrepreneur vs Manager/Intrapreneur, EDP phases</li>
+      <li><b>10pm–11pm:</b> Module 2 — Business ownership table, MSME table, Cooperative types, Shares vs Debentures</li>
+      <li><b>11pm–12am:</b> Module 3 — Govt institutions (acronyms + 3 functions each), Women schemes (all 7), Incentives list</li>
+      <li><b>12am–12:30am:</b> Module 4 — NPV + IRR numerical (practice on paper), PERT formula, Project appraisal 6 stages</li>
+      <li><b>12:30am–1am:</b> Module 5 — Break-even example, Working capital formula & importance, Strategic mgmt 4 phases, Recruitment steps</li>
+      <li><b>1am:</b> SLEEP. Review this sheet at 7:30am in the morning.</li>
+    </ul>
+  </div>
+
+</div>
+
+<script>
+function show(id) {
+  document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
